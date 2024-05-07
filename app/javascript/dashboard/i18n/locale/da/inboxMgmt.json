@@ -340,7 +340,7 @@
       },
       "AUTH": {
         "TITLE": "Vælg en kanal",
-        "DESC": "Chatwoot understøtter live-chat-widgets, Facebook Messenger, Twitter-profiler, WhatsApp, E-mails, osv., som kanaler. Hvis du ønsker at bygge en brugerdefineret kanal, kan du oprette den ved hjælp af API-kanalen. For at komme i gang, vælg en af kanalerne nedenfor."
+        "DESC": "ChatsappAI understøtter live-chat-widgets, Facebook Messenger, Twitter-profiler, WhatsApp, E-mails, osv., som kanaler. Hvis du ønsker at bygge en brugerdefineret kanal, kan du oprette den ved hjælp af API-kanalen. For at komme i gang, vælg en af kanalerne nedenfor."
       },
       "AGENTS": {
         "TITLE": "Agenter",
@@ -728,7 +728,7 @@
         "USER_MESSAGE": "Hi",
         "AGENT_MESSAGE": "Hej"
       },
-      "BRANDING_TEXT": "Drevet af Chatwoot",
+      "BRANDING_TEXT": "Drevet af ChatsappAI",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {

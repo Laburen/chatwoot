@@ -204,7 +204,7 @@ es:
       description: "Facilita a los agentes la traducción de mensajes añadiendo una integración de traducción de Google. Google Translate ayuda a identificar el idioma automáticamente y convertirlo al idioma elegido por el agente o administrador de la cuenta."
     openai:
       name: "OpenAI"
-      description: "Integra poderosas características de IA en Chatwoot aprovechando los modelos GPT de OpenAI."
+      description: "Integra poderosas características de IA en ChatsappAI aprovechando los modelos GPT de OpenAI."
   public_portal:
     search:
       search_placeholder: Buscar artículo por título o cuerpo...

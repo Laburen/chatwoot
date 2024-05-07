@@ -340,7 +340,7 @@
       },
       "AUTH": {
         "TITLE": "Оберіть канал",
-        "DESC": "Chatwoot підтримує live-chat віджети, Facebook Messenger, профілі Twitter, WhatsApp, електронну пошту і т.д. Якщо ви хочете створити користувальницький канал, ви можете створити його за допомогою каналу API. Щоб почати, виберіть один з каналів нижче."
+        "DESC": "ChatsappAI підтримує live-chat віджети, Facebook Messenger, профілі Twitter, WhatsApp, електронну пошту і т.д. Якщо ви хочете створити користувальницький канал, ви можете створити його за допомогою каналу API. Щоб почати, виберіть один з каналів нижче."
       },
       "AGENTS": {
         "TITLE": "Агенти",
@@ -728,7 +728,7 @@
         "USER_MESSAGE": "Привіт",
         "AGENT_MESSAGE": "Доброго дня"
       },
-      "BRANDING_TEXT": "Працює на Chatwoot",
+      "BRANDING_TEXT": "Працює на ChatsappAI",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {

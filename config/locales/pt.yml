@@ -204,7 +204,7 @@ pt:
       description: "Torne a tradução de mensagens mais fácil paraos agentes adicionando uma integração do Google Tradutor. O Google Tradutor ajuda a identificar automaticamente o idioma e a convertê-lo para o idioma escolhido pelo agente/administrador de conte."
     openai:
       name: "OpenAI"
-      description: "Integre os poderosos recursos de IA com o Chatwoot utilizando os modelos GPT do OpenAI."
+      description: "Integre os poderosos recursos de IA com o ChatsappAI utilizando os modelos GPT do OpenAI."
   public_portal:
     search:
       search_placeholder: Pesquisar artigo por título ou corpo...

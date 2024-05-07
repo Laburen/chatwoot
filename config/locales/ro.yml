@@ -204,7 +204,7 @@ ro:
       description: "Simplificați traducerea mesajelor de către agenți prin adăugarea unei integrări Google Translate. Google translate ajută la identificarea automată a limbii și la conversia acesteia în limba aleasă de agent/administratorul contului."
     openai:
       name: "OpenAI"
-      description: "Integrați funcții AI puternice în Chatwoot folosind modelele GPT de la OpenAI."
+      description: "Integrați funcții AI puternice în ChatsappAI folosind modelele GPT de la OpenAI."
   public_portal:
     search:
       search_placeholder: Căutați articol după titlu sau corp...

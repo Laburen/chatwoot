@@ -204,7 +204,7 @@ vi:
       description: "Giúp các đại lý dịch tin nhắn dễ dàng hơn bằng cách thêm Tích hợp Google Dịch. Google dịch giúp tự động xác định ngôn ngữ và chuyển đổi ngôn ngữ đó sang ngôn ngữ do quản trị viên đại lý/tài khoản chọn."
     openai:
       name: "OpenAI"
-      description: "Tích hợp các tính năng AI mạnh mẽ vào Chatwoot bằng cách tận dụng các mô hình GPT từ OpenAI."
+      description: "Tích hợp các tính năng AI mạnh mẽ vào ChatsappAI bằng cách tận dụng các mô hình GPT từ OpenAI."
   public_portal:
     search:
       search_placeholder: Tìm bài viết theo tiêu đề hoặc nội dung...
