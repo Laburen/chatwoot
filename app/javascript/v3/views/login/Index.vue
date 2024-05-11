@@ -17,9 +17,7 @@
       <h2
         class="mt-6 text-center text-3xl font-medium text-slate-900 dark:text-woot-50"
       >
-        {{
-          useInstallationName($t('LOGIN.TITLE'), 'ChatsappAI CRM')
-        }}
+        ChastappAI CRM
       </h2>
       <p
         v-if="showSignupLink"
