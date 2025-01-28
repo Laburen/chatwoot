@@ -61,12 +61,7 @@ export default {
           <div class="px-1 text-sm text-slate-800 dark:text-woot-50">
             <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
             <router-link class="text-link" to="/app/login">
-              {{
-                useInstallationName(
-                  $t('LOGIN.TITLE'),
-                  "Laburen"
-                )
-              }}
+              Login to Laburen
             </router-link>
           </div>
         </div>
