@@ -18,7 +18,7 @@ export default {
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     isAChatwootInstance() {
-      return this.globalConfig.installationName === 'Chatwoot';
+      return this.globalConfig.installationName === 'Laburen';
     },
   },
   beforeMount() {
@@ -64,7 +64,7 @@ export default {
               {{
                 useInstallationName(
                   $t('LOGIN.TITLE'),
-                  globalConfig.installationName
+                  "Laburen"
                 )
               }}
             </router-link>
