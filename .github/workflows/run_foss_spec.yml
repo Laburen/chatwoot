@@ -1,4 +1,4 @@
-name: Run Chatwoot CE spec
+name: Run Laburen CE spec
 on:
   push:
     branches:
