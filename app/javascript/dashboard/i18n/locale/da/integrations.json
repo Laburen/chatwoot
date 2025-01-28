@@ -1,7 +1,7 @@
 {
   "INTEGRATION_SETTINGS": {
     "HEADER": "Integrationer",
-    "DESCRIPTION": "ChatsappAI integrates with multiple tools and services to improve your team's efficiency. Explore the list below to configure your favorite apps.",
+    "DESCRIPTION": "Laburen integrates with multiple tools and services to improve your team's efficiency. Explore the list below to configure your favorite apps.",
     "LEARN_MORE": "Learn more about integrations",
     "LOADING": "Fetching integrations",
     "CAPTAIN": {
@@ -15,7 +15,7 @@
       "LEARN_MORE": "Learn more about webhooks",
       "FORM": {
         "CANCEL": "Annuller",
-        "DESC": "Webhook-begivenheder giver dig realtidsoplysninger om, hvad der sker på din Chatwoot-konto. Angiv en gyldig URL for at konfigurere et callback.",
+        "DESC": "Webhook-begivenheder giver dig realtidsoplysninger om, hvad der sker på din Laburen-konto. Angiv en gyldig URL for at konfigurere et callback.",
         "SUBSCRIPTIONS": {
           "LABEL": "Begivenheder",
           "EVENTS": {
@@ -31,7 +31,7 @@
         },
         "END_POINT": {
           "LABEL": "Webhook URL",
-          "PLACEHOLDER": "Eksempel: https://example/api/webhook",
+          "PLACEHOLDER": "Example: {webhookExampleURL}",
           "ERROR": "Angiv en gyldig URL"
         },
         "EDIT_SUBMIT": "Opdater webhook",
@@ -43,14 +43,14 @@
       "HEADER_BTN_TXT": "Tilføj ny webhook",
       "LOADING": "Henter vedhæftede webhooks",
       "SEARCH_404": "Der er ingen elementer, der matcher denne forespørgsel",
-      "SIDEBAR_TXT": "<p><b>Webhooks</b> </p> <p>Webhooks er HTTP tilbagekald som kan defineres for hver konto. De udløses af begivenheder som oprettelse af beskeder i Chatwoot. Du kan oprette mere end én webhook for denne konto. <br /><br /> For at oprette en <b>webhook</b>, klik på <b>Tilføj ny webhook</b> knappen. Du kan også fjerne enhver eksisterende webhook ved at klikke på Slet knappen.</p>",
+      "SIDEBAR_TXT": "<p><b>Webhooks</b> </p> <p>Webhooks er HTTP tilbagekald som kan defineres for hver konto. De udløses af begivenheder som oprettelse af beskeder i Laburen. Du kan oprette mere end én webhook for denne konto. <br /><br /> For at oprette en <b>webhook</b>, klik på <b>Tilføj ny webhook</b> knappen. Du kan også fjerne enhver eksisterende webhook ved at klikke på Slet knappen.</p>",
       "LIST": {
         "404": "Der er ingen webhooks konfigureret til denne konto.",
         "TITLE": "Administrer webhooks",
-        "TABLE_HEADER": [
-          "Webhook endepunkt",
-          "Handlinger"
-        ]
+        "TABLE_HEADER": {
+          "WEBHOOK_ENDPOINT": "Webhook endepunkt",
+          "ACTIONS": "Handlinger"
+        }
       },
       "EDIT": {
         "BUTTON_TEXT": "Rediger",
@@ -90,14 +90,14 @@
       },
       "HELP_TEXT": {
         "TITLE": "Brug Slack Integration",
-        "BODY": "<br/><p>ChatsappAI vil nu synkronisere alle indgående samtaler ind i <b><i>kundesamtaler</i></b> kanalen i din slack arbejdsplads.</p><p>Svar på en samtaletråd i <b><i>kunde-samtaler</i></b> slack kanal vil skabe et svar tilbage til kunden gennem chatwoot.</p><p>Start svarene med <b><i>note:</i></b> for at oprette private noter i stedet for svar.</p><p>Hvis replikatoren på slack har en agentprofil i chatwoot under samme e-mail, vil svarene blive tilknyttet i overensstemmelse hermed.</p><p>Når replikatoren ikke har en tilknyttet agentprofil, vil svarene blive fremsat fra bot-profilen.</p>",
+        "BODY": "With this integration, all of your incoming conversations will be synced to the ***{selectedChannelName}*** channel in your Slack workspace. You can manage all your customer conversations right within the channel and never miss a message.\n\nHere are the main features of the integration:\n\n**Respond to conversations from within Slack:** To respond to a conversation in the ***{selectedChannelName}*** Slack channel, simply type out your message and send it as a thread. This will create a response back to the customer through Laburen. It's that simple!\n\n **Create private notes:** If you want to create private notes instead of replies, start your message with ***`note:`***. This ensures that your message is kept private and won't be visible to the customer.\n\n**Associate an agent profile:** If the person who replied on Slack has an agent profile in Laburen under the same email, the replies will be associated with that agent profile automatically. This means you can easily track who said what and when. On the other hand, when the replier doesn't have an associated agent profile, the replies will appear from the bot profile to the customer.",
         "SELECTED": "selected"
       },
       "SELECT_CHANNEL": {
         "OPTION_LABEL": "Select a channel",
         "UPDATE": "Opdater",
         "BUTTON_TEXT": "Connect channel",
-        "DESCRIPTION": "Your Slack workspace is now linked with Chatwoot. However, the integration is currently inactive. To activate the integration and connect a channel to Chatwoot, please click the button below.\n\n**Note:** If you are attempting to connect a private channel, add the ChatsappAI app to the Slack channel before proceeding with this step.",
+        "DESCRIPTION": "Your Slack workspace is now linked with Laburen. However, the integration is currently inactive. To activate the integration and connect a channel to Laburen, please click the button below.\n\n**Note:** If you are attempting to connect a private channel, add the Laburen app to the Slack channel before proceeding with this step.",
         "ATTENTION_REQUIRED": "Attention required",
         "EXPIRED": "Your Slack integration has expired. To continue receiving messages on Slack, please delete the integration and connect your workspace again."
       },
@@ -177,16 +177,16 @@
     "DASHBOARD_APPS": {
       "TITLE": "Dashboard Apps",
       "HEADER_BTN_TXT": "Tilføj en ny dashboard app",
-      "SIDEBAR_TXT": "<p><b>Dashboard Apps</b></p><p>Dashboard Apps tillader organisationer at integrere en applikation i Chatwoot-dashboardet for at give konteksten til kundesupportagenter. Denne funktion giver dig mulighed for at oprette et program uafhængigt og integrere at inde i instrumentbrættet til at give brugerinformation, deres ordrer eller deres tidligere betalingshistorie.</p><p>Når du indlejrer din applikation ved hjælp af instrumentbrættet i Chatwoot, dit program vil få konteksten af samtalen og kontakt som en vinduesbegivenhed. Gennemfør en lytter til besked begivenheden på din side for at modtage konteksten.</p><p>For at tilføje en ny dashboard app, klik på knappen 'Tilføj en ny dashboard app'.</p>",
+      "SIDEBAR_TXT": "<p><b>Dashboard Apps</b></p><p>Dashboard Apps tillader organisationer at integrere en applikation i Laburen-dashboardet for at give konteksten til kundesupportagenter. Denne funktion giver dig mulighed for at oprette et program uafhængigt og integrere at inde i instrumentbrættet til at give brugerinformation, deres ordrer eller deres tidligere betalingshistorie.</p><p>Når du indlejrer din applikation ved hjælp af instrumentbrættet i Laburen, dit program vil få konteksten af samtalen og kontakt som en vinduesbegivenhed. Gennemfør en lytter til besked begivenheden på din side for at modtage konteksten.</p><p>For at tilføje en ny dashboard app, klik på knappen 'Tilføj en ny dashboard app'.</p>",
       "DESCRIPTION": "Dashboard Apps giver organisationer mulighed for at integrere et program i instrumentbrættet for at give konteksten for kundesupportagenter. Denne funktion giver dig mulighed for at oprette et program uafhængigt og integrere at give brugeroplysninger, deres ordrer, eller deres tidligere betalingshistorik.",
       "LEARN_MORE": "Learn more about Dashboard Apps",
       "LIST": {
         "404": "Der er ingen dashboard apps konfigureret på denne konto endnu",
         "LOADING": "Henter dashboard apps...",
-        "TABLE_HEADER": [
-          "Navn",
-          "Endpoint"
-        ],
+        "TABLE_HEADER": {
+          "NAME": "Navn",
+          "ENDPOINT": "Endpoint"
+        },
         "EDIT_TOOLTIP": "Rediger app",
         "DELETE_TOOLTIP": "Slet app"
       },
@@ -301,6 +301,15 @@
         "SUCCESS": "Issue unlinked successfully",
         "ERROR": "There was an error unlinking the issue, please try again"
       }
+    }
+  },
+  "CAPTAIN": {
+    "NAME": "Captain",
+    "COPILOT": {
+      "SEND_MESSAGE": "Send besked...",
+      "LOADER": "Captain is thinking",
+      "YOU": "You",
+      "USE": "Use this"
     }
   }
 }

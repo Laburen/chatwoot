@@ -15,7 +15,7 @@ class ChatwootFbProvider < Facebook::Messenger::Configuration::Providers::Base
   private
 
   def bot
-    Chatwoot::Bot
+    Laburen::Bot
   end
 end
 

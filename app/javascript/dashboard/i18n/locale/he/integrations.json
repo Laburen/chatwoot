@@ -1,7 +1,7 @@
 {
   "INTEGRATION_SETTINGS": {
     "HEADER": "אינטגרציות",
-    "DESCRIPTION": "ChatsappAI integrates with multiple tools and services to improve your team's efficiency. Explore the list below to configure your favorite apps.",
+    "DESCRIPTION": "Laburen integrates with multiple tools and services to improve your team's efficiency. Explore the list below to configure your favorite apps.",
     "LEARN_MORE": "Learn more about integrations",
     "LOADING": "Fetching integrations",
     "CAPTAIN": {
@@ -15,7 +15,7 @@
       "LEARN_MORE": "Learn more about webhooks",
       "FORM": {
         "CANCEL": "ביטול",
-        "DESC": "אירועי Webhook מספקים לך מידע בזמן אמת על מה שקורה בחשבון ChatsappAI שלך. אנא הזן כתובת אתר חוקית כדי להגדיר התקשרות חוזרת.",
+        "DESC": "אירועי Webhook מספקים לך מידע בזמן אמת על מה שקורה בחשבון Laburen שלך. אנא הזן כתובת אתר חוקית כדי להגדיר התקשרות חוזרת.",
         "SUBSCRIPTIONS": {
           "LABEL": "אירועים",
           "EVENTS": {
@@ -31,7 +31,7 @@
         },
         "END_POINT": {
           "LABEL": "כתובת אתר של Webhook",
-          "PLACEHOLDER": "דוגמה: https://example/api/webhook",
+          "PLACEHOLDER": "Example: {webhookExampleURL}",
           "ERROR": "אנא הכנס כתובת URL חוקית"
         },
         "EDIT_SUBMIT": "עדכון webhook",
@@ -43,14 +43,14 @@
       "HEADER_BTN_TXT": "הוסף Webhook חדש",
       "LOADING": "מביאים ל-webhooks מחוברים",
       "SEARCH_404": "אין פריטים התואמים לשאילתה זו",
-      "SIDEBAR_TXT": "<p><b>Webhooks</b> </p> <p>Webhooks הם התקשרות חוזרת של HTTP שניתן להגדיר עבור כל חשבון. הם מופעלים על ידי אירועים כמו יצירת הודעות ב-Chatwoot. אתה יכול ליצור יותר מ-webhook אחד עבור חשבון זה. <br /><br /> ליצירת <b>הוסף אינטרנט</b>, לחץ על הלחצן <b>הוסף אינטרנט חדש</b>. אתה יכול גם להסיר כל webhook קיים על ידי לחיצה על הלחצן Delete.</p>",
+      "SIDEBAR_TXT": "<p><b>Webhooks</b> </p> <p>Webhooks הם התקשרות חוזרת של HTTP שניתן להגדיר עבור כל חשבון. הם מופעלים על ידי אירועים כמו יצירת הודעות ב-Laburen. אתה יכול ליצור יותר מ-webhook אחד עבור חשבון זה. <br /><br /> ליצירת <b>הוסף אינטרנט</b>, לחץ על הלחצן <b>הוסף אינטרנט חדש</b>. אתה יכול גם להסיר כל webhook קיים על ידי לחיצה על הלחצן Delete.</p>",
       "LIST": {
         "404": "לא הוגדרו webhooks עבור חשבון זה.",
         "TITLE": "נהל webhooks",
-        "TABLE_HEADER": [
-          "נקודת קצה של Webhook",
-          "פעולות"
-        ]
+        "TABLE_HEADER": {
+          "WEBHOOK_ENDPOINT": "נקודת קצה של Webhook",
+          "ACTIONS": "פעולות"
+        }
       },
       "EDIT": {
         "BUTTON_TEXT": "ערוך",
@@ -90,14 +90,14 @@
       },
       "HELP_TEXT": {
         "TITLE": "שימוש ב-Slack Integration",
-        "BODY": "<br/><p>ChatsappAI תסנכרן כעת את כל השיחות הנכנסות לערוץ <b><i>שיחות-לקוח</i></b> בתוך מקום העבודה הרפוי שלך.</p><p>משיב ל- שרשור שיחה ב<b><i>שיחות לקוח</i></b> ערוץ רפוי ייצור תגובה חזרה ללקוח באמצעות chatwoot.</p><p>התחל את התשובות עם <b><i> הערה:</i></b> כדי ליצור הערות פרטיות במקום תשובות.</p><p>אם למשיב ב-slack יש פרופיל סוכן ב-chatwoot תחת אותו דוא\"ל, התשובות ישויכו בהתאם.</b> p><p>כאשר למשיב אין פרופיל סוכן משויך, התשובות ייעשו מפרופיל הבוט.</p>",
+        "BODY": "With this integration, all of your incoming conversations will be synced to the ***{selectedChannelName}*** channel in your Slack workspace. You can manage all your customer conversations right within the channel and never miss a message.\n\nHere are the main features of the integration:\n\n**Respond to conversations from within Slack:** To respond to a conversation in the ***{selectedChannelName}*** Slack channel, simply type out your message and send it as a thread. This will create a response back to the customer through Laburen. It's that simple!\n\n **Create private notes:** If you want to create private notes instead of replies, start your message with ***`note:`***. This ensures that your message is kept private and won't be visible to the customer.\n\n**Associate an agent profile:** If the person who replied on Slack has an agent profile in Laburen under the same email, the replies will be associated with that agent profile automatically. This means you can easily track who said what and when. On the other hand, when the replier doesn't have an associated agent profile, the replies will appear from the bot profile to the customer.",
         "SELECTED": "selected"
       },
       "SELECT_CHANNEL": {
         "OPTION_LABEL": "Select a channel",
         "UPDATE": "עדכן",
         "BUTTON_TEXT": "Connect channel",
-        "DESCRIPTION": "Your Slack workspace is now linked with Chatwoot. However, the integration is currently inactive. To activate the integration and connect a channel to Chatwoot, please click the button below.\n\n**Note:** If you are attempting to connect a private channel, add the ChatsappAI app to the Slack channel before proceeding with this step.",
+        "DESCRIPTION": "Your Slack workspace is now linked with Laburen. However, the integration is currently inactive. To activate the integration and connect a channel to Laburen, please click the button below.\n\n**Note:** If you are attempting to connect a private channel, add the Laburen app to the Slack channel before proceeding with this step.",
         "ATTENTION_REQUIRED": "Attention required",
         "EXPIRED": "Your Slack integration has expired. To continue receiving messages on Slack, please delete the integration and connect your workspace again."
       },
@@ -177,16 +177,16 @@
     "DASHBOARD_APPS": {
       "TITLE": "אפליקציות לוח מחוונים",
       "HEADER_BTN_TXT": "הוסף אפליקציית לוח מחוונים חדשה",
-      "SIDEBAR_TXT": "<p><b>אפליקציות לוח מחוונים</b></p><p>אפליקציות לוח מחוונים מאפשרות לארגונים להטמיע אפליקציה בתוך לוח המחוונים של ChatsappAI כדי לספק את ההקשר לסוכני תמיכת לקוחות. תכונה זו מאפשרת לך ליצור אפליקציה באופן עצמאי ולהטמיע אותה בתוך לוח המחוונים כדי לספק מידע על המשתמש, ההזמנות שלו או היסטוריית התשלומים הקודמת שלו.</p><p>כאשר תטמיע את האפליקציה שלך באמצעות לוח המחוונים ב-Chatwoot, האפליקציה שלך תהיה קבל את ההקשר של השיחה והקשר כאירוע חלון. הטמיע מאזין לאירוע ההודעה בדף שלך כדי לקבל את ההקשר.</p><p>כדי להוסיף אפליקציית לוח מחוונים חדשה, לחץ על הלחצן 'הוסף אפליקציית לוח מחוונים חדשה'.</p>",
+      "SIDEBAR_TXT": "<p><b>אפליקציות לוח מחוונים</b></p><p>אפליקציות לוח מחוונים מאפשרות לארגונים להטמיע אפליקציה בתוך לוח המחוונים של Laburen כדי לספק את ההקשר לסוכני תמיכת לקוחות. תכונה זו מאפשרת לך ליצור אפליקציה באופן עצמאי ולהטמיע אותה בתוך לוח המחוונים כדי לספק מידע על המשתמש, ההזמנות שלו או היסטוריית התשלומים הקודמת שלו.</p><p>כאשר תטמיע את האפליקציה שלך באמצעות לוח המחוונים ב-Laburen, האפליקציה שלך תהיה קבל את ההקשר של השיחה והקשר כאירוע חלון. הטמיע מאזין לאירוע ההודעה בדף שלך כדי לקבל את ההקשר.</p><p>כדי להוסיף אפליקציית לוח מחוונים חדשה, לחץ על הלחצן 'הוסף אפליקציית לוח מחוונים חדשה'.</p>",
       "DESCRIPTION": "אפליקציות לוח מחוונים מאפשרות לארגונים להטמיע אפליקציה בתוך לוח המחוונים כדי לספק את ההקשר לסוכני תמיכת לקוחות. תכונה זו מאפשרת לך ליצור אפליקציה באופן עצמאי ולהטמיע אותה כדי לספק מידע על המשתמש, ההזמנות שלהם או היסטוריית התשלומים הקודמת שלהם.",
       "LEARN_MORE": "Learn more about Dashboard Apps",
       "LIST": {
         "404": "אין עדיין אפליקציות לוח מחוונים מוגדרות בחשבון זה",
         "LOADING": "מביא אפליקציות לוח מחוונים...",
-        "TABLE_HEADER": [
-          "שם",
-          "נקודת קצה"
-        ],
+        "TABLE_HEADER": {
+          "NAME": "שם",
+          "ENDPOINT": "נקודת קצה"
+        },
         "EDIT_TOOLTIP": "ערוך אפליקציה",
         "DELETE_TOOLTIP": "מחק אפליקציה"
       },
@@ -301,6 +301,15 @@
         "SUCCESS": "Issue unlinked successfully",
         "ERROR": "There was an error unlinking the issue, please try again"
       }
+    }
+  },
+  "CAPTAIN": {
+    "NAME": "Captain",
+    "COPILOT": {
+      "SEND_MESSAGE": "שלח הודעה...",
+      "LOADER": "Captain is thinking",
+      "YOU": "You",
+      "USE": "Use this"
     }
   }
 }

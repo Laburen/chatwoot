@@ -29,7 +29,7 @@ es:
       invalid: Eventos inválidos
     signup:
       disposable_email: No permitimos correos electrónicos desechables
-      blocked_domain: This domain is not allowed. If you believe this is a mistake, please contact support.
+      blocked_domain: Este dominio no está permitido.  Si cree que esto es un error, póngase en contacto con soporte.
       invalid_email: Ha introducido un correo electrónico no válido
       email_already_exists: "Ya te has registrado en una cuenta con %{email}"
       invalid_params: 'Inválido, por favor comprueba los parámetros de registro e inténtalo de nuevo'
@@ -66,6 +66,7 @@ es:
       number_of_records: Límite alcanzado. El número máximo de filtros personalizados permitidos para un usuario por cuenta es de 50.
       invalid_attribute: Clave de atributo no válida - [%{key}]. La clave debe ser una de [%{allowed_keys}] o un atributo personalizado definido en la cuenta.
       invalid_operator: Operador no válido. Los operadores permitidos para %{attribute_name} son [%{allowed_keys}].
+      invalid_query_operator: El operador de consulta debe ser "AND" o "OR".
       invalid_value: Valor no válido. Los valores proporcionados para %{attribute_name} no son válidos
   reports:
     period: Reportando el periodo desde %{since} hasta %{until}
@@ -193,14 +194,14 @@ es:
       description: "Las aplicaciones de panel te permiten crear e incrustar aplicaciones que muestran información de usuario, pedidos o historial de pagos, proporcionando más contexto a tus agentes de soporte al cliente."
     dyte:
       name: "Dyte"
-      description: "Dyte es un producto que integra funcionalidades de audio y video en tu aplicación. Con esta integración, tus agentes pueden iniciar llamadas de video/voz con tus clientes directamente desde Chatwoot."
+      description: "Dyte es un producto que integra funcionalidades de audio y video en tu aplicación. Con esta integración, tus agentes pueden iniciar llamadas de video/voz con tus clientes directamente desde Laburen."
       meeting_name: "%{agent_name} ha iniciado una reunión"
     slack:
       name: "Slack"
-      description: "Integra ChatsappAI con Slack para mantener a tu equipo sincronizado. Esta integración te permite recibir notificaciones de nuevas conversaciones y responder directamente desde la interfaz de Slack."
+      description: "Integra Laburen con Slack para mantener a tu equipo sincronizado. Esta integración te permite recibir notificaciones de nuevas conversaciones y responder directamente desde la interfaz de Slack."
     webhooks:
       name: "Webhook"
-      description: "Los eventos de webhook proporcionan actualizaciones en tiempo real sobre las actividades en tu cuenta de Chatwoot. Puedes suscribirte a los eventos que prefieras y ChatsappAI te enviará llamadas HTTP con las actualizaciones."
+      description: "Los eventos de webhook proporcionan actualizaciones en tiempo real sobre las actividades en tu cuenta de Laburen. Puedes suscribirte a los eventos que prefieras y Laburen te enviará llamadas HTTP con las actualizaciones."
     dialogflow:
       name: "Dialogflow"
       description: "Construye chatbots con Dialogflow e intégralos fácilmente en tu bandeja de entrada. Estos bots pueden manejar consultas iniciales antes de transferirlas a un agente de servicio al cliente."

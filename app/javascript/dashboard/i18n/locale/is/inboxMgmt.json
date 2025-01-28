@@ -8,28 +8,24 @@
     "LIST": {
       "404": "Það eru engin innhólf tengd við þennan reikning."
     },
-    "CREATE_FLOW": [
-      {
-        "title": "Veldu rás",
-        "route": "settings_inbox_new",
-        "body": "Veldu þjónustuveituna sem þú vilt samþætta við Chatwoot."
+    "CREATE_FLOW": {
+      "CHANNEL": {
+        "TITLE": "Veldu rás",
+        "BODY": "Veldu þjónustuveituna sem þú vilt samþætta við Laburen."
       },
-      {
-        "title": "Nýtt innhólf",
-        "route": "settings_inboxes_page_channel",
-        "body": "Staðfestu reikninginn þinn og búðu til pósthólf."
+      "INBOX": {
+        "TITLE": "Nýtt innhólf",
+        "BODY": "Staðfestu reikninginn þinn og búðu til pósthólf."
       },
-      {
-        "title": "Bæta við þjónustufulltrúa",
-        "route": "settings_inboxes_add_agents",
-        "body": "Bæta þjónustufulltrúum á nýja innhólfið."
+      "AGENT": {
+        "TITLE": "Bæta við þjónustufulltrúa",
+        "BODY": "Bæta þjónustufulltrúum á nýja innhólfið."
       },
-      {
-        "title": "Voilà!",
-        "route": "settings_inbox_finish",
-        "body": "Þú ert tilbúin til að halda áfram!"
+      "FINISH": {
+        "TITLE": "Voilà!",
+        "BODY": "Þú ert tilbúin til að halda áfram!"
       }
-    ],
+    },
     "ADD": {
       "CHANNEL_NAME": {
         "LABEL": "Nafn Innhólfs",
@@ -41,7 +37,7 @@
         "PLACEHOLDER": "Sláðu inn nafn vefsíðu (Dæmi: Acme ehf)"
       },
       "FB": {
-        "HELP": "PS: Með því að skrá þig inn fáum við aðeins aðgang að skilaboðum síðunnar þinnar. ChatsappAI getur aldrei nálgast einkaskilaboðin þín.",
+        "HELP": "PS: Með því að skrá þig inn fáum við aðeins aðgang að skilaboðum síðunnar þinnar. Laburen getur aldrei nálgast einkaskilaboðin þín.",
         "CHOOSE_PAGE": "Veldu Síðu",
         "CHOOSE_PLACEHOLDER": "Veldu síðu úr listanum",
         "INBOX_NAME": "Nafn Innhólfs",
@@ -343,7 +339,7 @@
       },
       "AUTH": {
         "TITLE": "Veldu rás",
-        "DESC": "ChatsappAI styður vefspjall, Facebook Messenger, Twitter prófíla, WhatsApp, tölvupóst osfrv., Sem rásir. Ef þú vilt búa til sérsniðna rás geturðu búið hana til með því að nota API rásina. Til að byrja skaltu velja eina af rásunum hér að neðan."
+        "DESC": "Laburen styður vefspjall, Facebook Messenger, Twitter prófíla, WhatsApp, tölvupóst osfrv., Sem rásir. Ef þú vilt búa til sérsniðna rás geturðu búið hana til með því að nota API rásina. Til að byrja skaltu velja eina af rásunum hér að neðan."
       },
       "AGENTS": {
         "TITLE": "Þjónustufulltrúar",
@@ -353,11 +349,11 @@
       },
       "DETAILS": {
         "TITLE": "Innhólfs Upplýsingar",
-        "DESC": "Í fellilistanum hér að neðan, veldu Facebook síðuna sem þú vilt tengja við Chatwoot. Þú getur líka gefið innhólfinu sérsniðið nafn til að þekkja það betur."
+        "DESC": "Í fellilistanum hér að neðan, veldu Facebook síðuna sem þú vilt tengja við Laburen. Þú getur líka gefið innhólfinu sérsniðið nafn til að þekkja það betur."
       },
       "FINISH": {
         "TITLE": "Nailed It!",
-        "DESC": "Þú hefur lokið við að innleiða Facebook síðuna þína í Chatwoot. Næst þegar viðskiptavinur sendir skilaboð á síðunni þinni birtist samtalið sjálfkrafa í innhólfinu þínu.<br>Við erum líka að útvega þér netspjalls skriftu sem þú getur auðveldlega bætt við vefsíðuna þína. Þegar þetta er komið á vefsvæðið þitt geta viðskiptavinir sent þér skilaboð beint frá vefsíðunni þinni án hjálpar utanaðkomandi tóla og samtalið mun birtast hér, í Chatwoot.<br>Svalt, ha? Jæja, við reynum að vera það :)"
+        "DESC": "Þú hefur lokið við að innleiða Facebook síðuna þína í Laburen. Næst þegar viðskiptavinur sendir skilaboð á síðunni þinni birtist samtalið sjálfkrafa í innhólfinu þínu.<br>Við erum líka að útvega þér netspjalls skriftu sem þú getur auðveldlega bætt við vefsíðuna þína. Þegar þetta er komið á vefsvæðið þitt geta viðskiptavinir sent þér skilaboð beint frá vefsíðunni þinni án hjálpar utanaðkomandi tóla og samtalið mun birtast hér, í Laburen.<br>Svalt, ha? Jæja, við reynum að vera það :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Select your email provider",
@@ -739,7 +735,7 @@
         "USER_MESSAGE": "Hi",
         "AGENT_MESSAGE": "Hello"
       },
-      "BRANDING_TEXT": "Keyrt af Chatwoot",
+      "BRANDING_TEXT": "Keyrt af Laburen",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {

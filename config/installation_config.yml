@@ -1,6 +1,6 @@
-# This file contains all the installation wide configuration which controls various settings in Chatwoot
+# This file contains all the installation wide configuration which controls various settings in Laburen
 # This is internal config and should not be modified by the user directly in database
-# ChatsappAI might override and modify these values during the upgrade process
+# Laburen might override and modify these values during the upgrade process
 # Configs which can be modified by the user are available in the dashboard under appropriate UI
 #
 # name: the name of the config referenced in the code
@@ -14,7 +14,7 @@
 
 # ------- Branding Related Config ------- #
 - name: INSTALLATION_NAME
-  value: 'Chatwoot'
+  value: 'Laburen'
   display_title: 'Installation Name'
   description: 'The installation wide name that would be used in the dashboard, title etc.'
 - name: LOGO_THUMBNAIL
@@ -38,7 +38,7 @@
   display_title: 'Widget Brand URL'
   description: 'The URL that would be used in the widget under the section “Powered By”'
 - name: BRAND_NAME
-  value: 'Chatwoot'
+  value: 'Laburen'
   display_title: 'Brand Name'
   description: 'The name that would be used in emails and the widget'
 - name: TERMS_URL
@@ -51,8 +51,8 @@
   description: 'The privacy policy URL displayed in the app'
 - name: DISPLAY_MANIFEST
   value: true
-  display_title: 'ChatsappAI Metadata'
-  description: 'Display default ChatsappAI metadata like favicons and upgrade warnings'
+  display_title: 'Laburen Metadata'
+  description: 'Display default Laburen metadata like favicons and upgrade warnings'
   type: boolean
 # ------- End of Branding Related Config ------- #
 
@@ -133,16 +133,37 @@
   locked: false
 # End of Microsoft Email Channel Config
 
-# ------- ChatsappAI Internal Config for Cloud ----#
+# MARK: Captain Config
+- name: CAPTAIN_OPEN_AI_API_KEY
+  display_title: 'OpenAI API Key'
+  description: 'The API key used to authenticate requests to OpenAI services for Captain AI.'
+  locked: false
+- name: CAPTAIN_OPEN_AI_MODEL
+  display_title: 'OpenAI Model'
+  description: 'The OpenAI model configured for use in Captain AI. Default: gpt-4o-mini'
+  locked: false
+- name: CAPTAIN_FIRECRAWL_API_KEY
+  display_title: 'FireCrawl API Key (optional)'
+  description: 'The FireCrawl API key for the Captain AI service'
+  locked: false
+- name: CAPTAIN_CLOUD_PLAN_LIMITS
+  display_title: 'Captain Cloud Plan Limits'
+  description: 'The limits for the Captain AI service for different plans'
+  value:
+  type: code
+
+# End of Captain Config
+
+# ------- Laburen Internal Config for Cloud ----#
 - name: CHATWOOT_INBOX_TOKEN
   value:
   display_title: 'Inbox Token'
-  description: 'The ChatsappAI Inbox Token for Contact Support in Cloud'
+  description: 'The Laburen Inbox Token for Contact Support in Cloud'
   locked: false
 - name: CHATWOOT_INBOX_HMAC_KEY
   value:
   display_title: 'Inbox HMAC Key'
-  description: 'The ChatsappAI Inbox HMAC Key for Contact Support in Cloud'
+  description: 'The Laburen Inbox HMAC Key for Contact Support in Cloud'
   locked: false
 - name: CHATWOOT_CLOUD_PLANS
   display_title: 'Cloud Plans'
@@ -154,11 +175,11 @@
   description: 'Config to features and their associated plans'
 - name: DEPLOYMENT_ENV
   value: self-hosted
-  description: 'The deployment environment of the installation, to differentiate between ChatsappAI cloud and self-hosted'
+  description: 'The deployment environment of the installation, to differentiate between Laburen cloud and self-hosted'
 - name: ANALYTICS_TOKEN
   value:
   display_title: 'Analytics Token'
-  description: 'The June.so analytics token for ChatsappAI cloud'
+  description: 'The June.so analytics token for Laburen cloud'
 - name: CLEARBIT_API_KEY
   value:
   display_title: 'Clearbit API Key'
@@ -173,9 +194,9 @@
   display_title: 'Blocked Email Domains'
   description: 'Add a domain per line to block them from signing up, accepts Regex'
   type: code
-# ------- End of ChatsappAI Internal Config for Cloud ----#
+# ------- End of Laburen Internal Config for Cloud ----#
 
-# ------- ChatsappAI Internal Config for Self Hosted ----#
+# ------- Laburen Internal Config for Self Hosted ----#
 - name: INSTALLATION_PRICING_PLAN
   value: 'community'
   description: 'The pricing plan for the installation, retrieved from the billing API'
@@ -184,14 +205,14 @@
   description: 'The number of licenses purchased for the installation, retrieved from the billing API'
 - name: CHATWOOT_SUPPORT_WEBSITE_TOKEN
   value:
-  description: 'The ChatsappAI website token, used to identify the ChatsappAI inbox and display the "Contact Support" option on the billing page'
+  description: 'The Laburen website token, used to identify the Laburen inbox and display the "Contact Support" option on the billing page'
 - name: CHATWOOT_SUPPORT_SCRIPT_URL
   value:
-  description: 'The ChatsappAI script base URL, to display the "Contact Support" option on the billing page'
+  description: 'The Laburen script base URL, to display the "Contact Support" option on the billing page'
 - name: CHATWOOT_SUPPORT_IDENTIFIER_HASH
   value:
-  description: 'The ChatsappAI identifier hash, to validate the contact in the live chat window.'
-# ------- End of ChatsappAI Internal Config for Self Hosted ----#
+  description: 'The Laburen identifier hash, to validate the contact in the live chat window.'
+# ------- End of Laburen Internal Config for Self Hosted ----#
 
 ## ------ Configs added for enterprise clients ------ ##
 - name: API_CHANNEL_NAME
@@ -222,14 +243,3 @@
   locked: false
   description: 'Contents on your firebase credentials json file'
 ## ------ End of Configs added for FCM v1 notifications ------ ##
-
-## ----- Captain Configs ----- ##
-- name: CAPTAIN_API_URL
-  value:
-  display_title: 'Captain API URL'
-  description: 'The API URL for Captain'
-- name: CAPTAIN_APP_URL
-  value:
-  display_title: 'Captain App URL'
-  description: 'The App URL for Captain'
-## ----- End of Captain Configs ----- ##

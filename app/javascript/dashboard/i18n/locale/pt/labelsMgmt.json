@@ -10,11 +10,11 @@
       "404": "Não há etiquetas disponíveis nesta conta.",
       "TITLE": "Gerir etiquetas",
       "DESC": "As etiquetas permitem agrupar conversas.",
-      "TABLE_HEADER": [
-        "Nome",
-        "Descrição",
-        "Cor"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "Nome:",
+        "DESCRIPTION": "Descrição",
+        "COLOR": "Cor"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Desmarcar etiqueta",
         "DISMISS": "Descartar sugestão"
       },
-      "POWERED_BY": "ChatsappAI IA",
+      "POWERED_BY": "Laburen IA",
       "DISMISS": "Descartar",
       "ADD_SELECTED_LABELS": "Adicionar etiquetas selecionadas",
       "ADD_SELECTED_LABEL": "Adicionar etiqueta selecionada",

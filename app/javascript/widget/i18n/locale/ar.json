@@ -46,7 +46,7 @@
   "BUBBLE": {
     "LABEL": "تحدث الينا"
   },
-  "POWERED_BY": "مدعوم بواسطة Chatwoot",
+  "POWERED_BY": "مدعوم بواسطة Laburen",
   "EMAIL_PLACEHOLDER": "الرجاء إدخال بريدك الإلكتروني",
   "CHAT_PLACEHOLDER": "أكتب رسالتك",
   "TODAY": "اليوم",
@@ -93,7 +93,7 @@
   "EMOJI": {
     "PLACEHOLDER": "ابحث في الايموجي",
     "NOT_FOUND": "لا يوجد إيموجي يطابق بحثك",
-    "ARIA_LABEL": "Emoji picker"
+    "ARIA_LABEL": "أداة اختيار الايموجي"
   },
   "CSAT": {
     "TITLE": "قيم محادثتك",

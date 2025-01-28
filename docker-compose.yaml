@@ -89,7 +89,7 @@ services:
     command: bin/vite dev
 
   postgres:
-    image: postgres:12
+    image: pgvector/pgvector:pg16
     restart: always
     ports:
       - '5432:5432'
@@ -98,7 +98,7 @@ services:
     environment:
       - POSTGRES_DB=chatwoot
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=postgres
 
   redis:
     image: redis:alpine

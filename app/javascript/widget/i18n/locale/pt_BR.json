@@ -41,12 +41,12 @@
     "VIEW_MESSAGES_BUTTON": "Ver novas mensagens",
     "CLOSE_MESSAGES_BUTTON": "Fechar",
     "COMPANY_FROM": "De",
-    "BOT": "Bot"
+    "BOT": "Robôs"
   },
   "BUBBLE": {
     "LABEL": "Fale conosco no chat"
   },
-  "POWERED_BY": "Desenvolvido por Chatwoot",
+  "POWERED_BY": "Desenvolvido por Laburen",
   "EMAIL_PLACEHOLDER": "Por favor, insira seu e-mail",
   "CHAT_PLACEHOLDER": "Digite sua mensagem",
   "TODAY": "Hoje",

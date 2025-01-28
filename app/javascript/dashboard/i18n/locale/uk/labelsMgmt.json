@@ -10,11 +10,11 @@
       "404": "У цьому акаунті немає міток.",
       "TITLE": "Керувати мітками",
       "DESC": "Мітки, які дозволяють згрупувати розмови.",
-      "TABLE_HEADER": [
-        "Ім'я",
-        "Опис",
-        "Колір"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "Ім'я",
+        "DESCRIPTION": "Опис",
+        "COLOR": "Колір"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Скасувати вибір мітки",
         "DISMISS": "Відхилити пропозицію"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "Відхилити",
       "ADD_SELECTED_LABELS": "Додати вибрані мітки",
       "ADD_SELECTED_LABEL": "Додати вибрану мітку",

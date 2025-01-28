@@ -10,11 +10,11 @@
       "404": "In diesem Konto sind keine Labels verfügbar.",
       "TITLE": "Labels verwalten",
       "DESC": "Mit Labels lassen sich Unterhaltungen zusammenfassen.",
-      "TABLE_HEADER": [
-        "Name",
-        "Beschreibung",
-        "Farbe"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "Name",
+        "DESCRIPTION": "Beschreibung",
+        "COLOR": "Farbe"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Label abwählen",
         "DISMISS": "Vorschlag verwerfen"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "Verwerfen",
       "ADD_SELECTED_LABELS": "Ausgewählte Labels hinzufügen",
       "ADD_SELECTED_LABEL": "Ausgewähltes Label hinzufügen",

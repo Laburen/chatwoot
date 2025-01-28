@@ -10,11 +10,11 @@
       "404": "No hi ha etiquetes disponibles en aquest compte.",
       "TITLE": "Gestiona les etiquetes",
       "DESC": "Les etiquetes et permeten agrupar les converses.",
-      "TABLE_HEADER": [
-        "Nom",
-        "Descripció",
-        "Color"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "Nom",
+        "DESCRIPTION": "Descripció",
+        "COLOR": "Color"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Desseleccioneu l'etiqueta",
         "DISMISS": "Ignora el suggeriment"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "Descartar",
       "ADD_SELECTED_LABELS": "Afegeix les etiquetes seleccionades",
       "ADD_SELECTED_LABEL": "Afegeix les etiquetes seleccionades",

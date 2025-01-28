@@ -10,11 +10,11 @@
       "404": "Bu hesapta mevcut etiket yok.",
       "TITLE": "Etiketleri yönet",
       "DESC": "Etiketler, konuşmaları birlikte gruplamanıza olanak tanır.",
-      "TABLE_HEADER": [
-        "İsim",
-        "Açıklama",
-        "Renk"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "İsim",
+        "DESCRIPTION": "Açıklama",
+        "COLOR": "Renk"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Etiketin seçimini kaldır",
         "DISMISS": "Öneriyi reddet"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "Kapat",
       "ADD_SELECTED_LABELS": "Seçili etiketleri ekle",
       "ADD_SELECTED_LABEL": "Seçili etiketi ekle",

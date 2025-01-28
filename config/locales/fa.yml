@@ -66,6 +66,7 @@ fa:
       number_of_records: سررسید محدودیت. حداکثر تعداد قابل قبول فیلترها برای یک کاربر در هر اکانت 50 می باشند.
       invalid_attribute: کلید ویژگی معتبر نیست (%{key}). کلید باید یکی از %{allowed_keys} باشد یا یک ویژگی سفارشی ایجاد شده در حساب.
       invalid_operator: این عملیات مجاز نیست. عملیات های مجاز برای %{attribute_name} شامل %{allowed_keys} می باشد.
+      invalid_query_operator: Query operator must be either "AND" or "OR".
       invalid_value: مقدار معتبر نیست. مقادیر ارائه شده برای %{attribute_name} معتبر نیست
   reports:
     period: زمان گزارش از %{since} تا %{until}
@@ -193,14 +194,14 @@ fa:
       description: "Dashboard Apps allow you to create and embed applications that display user information, orders, or payment history, providing more context to your customer support agents."
     dyte:
       name: "Dyte"
-      description: "Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from Chatwoot."
+      description: "Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from Laburen."
       meeting_name: "%{agent_name} جلسه ای را آغاز کرده است"
     slack:
       name: "Slack"
-      description: "Integrate ChatsappAI with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
+      description: "Integrate Laburen with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
     webhooks:
       name: "وب هوک"
-      description: "Webhook events provide real-time updates about activities in your ChatsappAI account. You can subscribe to your preferred events, and ChatsappAI will send you HTTP callbacks with the updates."
+      description: "Webhook events provide real-time updates about activities in your Laburen account. You can subscribe to your preferred events, and Laburen will send you HTTP callbacks with the updates."
     dialogflow:
       name: "Dialogflow"
       description: "Build chatbots with Dialogflow and easily integrate them into your inbox. These bots can handle initial queries before transferring them to a customer service agent."

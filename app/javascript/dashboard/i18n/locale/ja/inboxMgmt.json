@@ -8,28 +8,24 @@
     "LIST": {
       "404": "このアカウントに紐付けられている受信トレイはありません。"
     },
-    "CREATE_FLOW": [
-      {
-        "title": "チャンネルを選択",
-        "route": "settings_inbox_new",
-        "body": "Chatwootと統合するプロバイダを選択してください。"
+    "CREATE_FLOW": {
+      "CHANNEL": {
+        "TITLE": "チャンネルを選択",
+        "BODY": "Chatwootと統合するプロバイダを選択してください。"
       },
-      {
-        "title": "受信トレイを作成",
-        "route": "settings_inboxes_page_channel",
-        "body": "アカウントを認証し、受信トレイを作成します。"
+      "INBOX": {
+        "TITLE": "受信トレイを作成",
+        "BODY": "アカウントを認証し、受信トレイを作成します。"
       },
-      {
-        "title": "担当者を追加",
-        "route": "settings_inboxes_add_agents",
-        "body": "作成した受信トレイに担当者を追加します。"
+      "AGENT": {
+        "TITLE": "担当者を追加",
+        "BODY": "作成した受信トレイに担当者を追加します。"
       },
-      {
-        "title": "Voilà!",
-        "route": "settings_inbox_finish",
-        "body": "すべての準備が完了しました！"
+      "FINISH": {
+        "TITLE": "Voilà!",
+        "BODY": "すべての準備が完了しました！"
       }
-    ],
+    },
     "ADD": {
       "CHANNEL_NAME": {
         "LABEL": "受信トレイ名",
@@ -343,7 +339,7 @@
       },
       "AUTH": {
         "TITLE": "Choose a channel",
-        "DESC": "ChatsappAI supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below."
+        "DESC": "Laburen supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below."
       },
       "AGENTS": {
         "TITLE": "担当者",
@@ -353,7 +349,7 @@
       },
       "DETAILS": {
         "TITLE": "受信トレイの詳細",
-        "DESC": "下のドロップダウンから、ChatsappAI に接続する Facebook ページを選択してください。 わかりやすくするために受信トレイの名前をカスタマイズすることもできます。"
+        "DESC": "下のドロップダウンから、Laburen に接続する Facebook ページを選択してください。 わかりやすくするために受信トレイの名前をカスタマイズすることもできます。"
       },
       "FINISH": {
         "TITLE": "ばっちりです！",
@@ -739,7 +735,7 @@
         "USER_MESSAGE": "Hi",
         "AGENT_MESSAGE": "Hello"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
+      "BRANDING_TEXT": "Powered by Laburen",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {

@@ -180,6 +180,28 @@ describe Integrations::Slack::SendOnSlackService do
         expect(message.attachments).to be_any
       end
 
+      it 'will not call file_upload if attachment does not have a file (e.g facebook - fallback type)' do
+        expect(slack_client).to receive(:chat_postMessage).with(
+          channel: hook.reference_id,
+          text: message.content,
+          username: "#{message.sender.name} (Contact)",
+          thread_ts: conversation.identifier,
+          icon_url: anything,
+          unfurl_links: true
+        ).and_return(slack_message)
+
+        message.attachments.new(account_id: message.account_id, file_type: :fallback)
+
+        expect(slack_client).not_to receive(:files_upload)
+
+        message.save!
+
+        builder.perform
+
+        expect(message.external_source_id_slack).to eq 'cw-origin-6789.12345'
+        expect(message.attachments).to be_any
+      end
+
       it 'sent a template message on slack' do
         builder = described_class.new(message: template_message, hook: hook)
         allow(builder).to receive(:slack_client).and_return(slack_client)
@@ -254,7 +276,7 @@ describe Integrations::Slack::SendOnSlackService do
     context 'when message contains mentions' do
       it 'sends formatted message to slack along with inbox name when identifier not present' do
         inbox = conversation.inbox
-        message.update!(content: "Hi [@#{contact.name}](mention://user/#{contact.id}/#{contact.name}), welcome to Chatwoot!")
+        message.update!(content: "Hi [@#{contact.name}](mention://user/#{contact.id}/#{contact.name}), welcome to Laburen!")
         formatted_message_text = message.content.gsub(RegexHelper::MENTION_REGEX, '\1')
 
         expect(slack_client).to receive(:chat_postMessage).with(
@@ -271,7 +293,7 @@ describe Integrations::Slack::SendOnSlackService do
 
       it 'sends formatted message to slack when identifier is present' do
         conversation.update!(identifier: 'random_slack_thread_ts')
-        message.update!(content: "Hi [@#{contact.name}](mention://user/#{contact.id}/#{contact.name}), welcome to Chatwoot!")
+        message.update!(content: "Hi [@#{contact.name}](mention://user/#{contact.id}/#{contact.name}), welcome to Laburen!")
         formatted_message_text = message.content.gsub(RegexHelper::MENTION_REGEX, '\1')
 
         expect(slack_client).to receive(:chat_postMessage).with(

@@ -10,11 +10,11 @@
       "404": "Brak etykiet na tym koncie.",
       "TITLE": "Zarządzaj etykietami",
       "DESC": "Etykiety pozwalają na grupowanie rozmów razem.",
-      "TABLE_HEADER": [
-        "Nazwa",
-        "Opis",
-        "Kolor"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "Imię",
+        "DESCRIPTION": "Opis",
+        "COLOR": "Kolor"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Deselect label",
         "DISMISS": "Dismiss suggestion"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "Odrzuć",
       "ADD_SELECTED_LABELS": "Add selected labels",
       "ADD_SELECTED_LABEL": "Add selected label",

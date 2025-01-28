@@ -111,7 +111,7 @@ export default {
         <woot-code
           :script="inbox.web_widget_script"
           lang="html"
-          :codepen-title="`${inbox.name} - ChatsappAI Widget Test`"
+          :codepen-title="`${inbox.name} - Laburen Widget Test`"
           enable-code-pen
         />
       </SettingsSection>

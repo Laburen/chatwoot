@@ -66,6 +66,7 @@ pt_BR:
       number_of_records: Limite atingido. O número máximo de filtros personalizados permitidos para um usuário por conta é de 50.
       invalid_attribute: Chave de atributo inválido - [%{key}]. A chave deve ser uma das [%{allowed_keys}] ou um atributo personalizado definido na conta.
       invalid_operator: Operador inválido. Os operadores permitidos para %{attribute_name} são [%{allowed_keys}].
+      invalid_query_operator: Operador de consulta deve ser "E" ou "OU".
       invalid_value: Valor inválido. Os valores fornecidos para %{attribute_name} são inválidos
   reports:
     period: Reportando o período %{since} a %{until}
@@ -189,18 +190,18 @@ pt_BR:
       delete: "%{contact_name} está Online, por favor, tente novamente mais tarde"
   integration_apps:
     dashboard_apps:
-      name: "Apps da Dashboard"
-      description: "Apps do Painel permitem que você crie e incorpore aplicativos que exibem informações, pedidos ou histórico de pagamento, fornecendo mais contexto aos seus agentes de suporte ao cliente."
+      name: "Aplicativos do Painel"
+      description: "Aplicativos do Painel permitem que você crie e incorpore aplicativos que exibem informações, pedidos ou histórico de pagamento, fornecendo mais contexto aos seus agentes de suporte ao cliente."
     dyte:
       name: "Dyte"
-      description: "Dyte é um produto que integra as funcionalidades de áudio e vídeo em seu aplicativo. Com esta integração, seus agentes podem iniciar chamadas de vídeo/voz com seus clientes diretamente do Chatwoot."
+      description: "Dyte é um produto que integra as funcionalidades de áudio e vídeo em sua aplicação. Com esta integração, os seus agentes podem iniciar chamadas de vídeo/voz com seus clientes diretamente do chatwoot."
       meeting_name: "%{agent_name} começou a reunião"
     slack:
       name: "Slack"
-      description: "Integre ChatsappAI com Slack para manter sua equipe em sincronia. Essa integração permite que você receba notificações de novas conversas e as responda diretamente na interface do Slack."
+      description: "Integre Laburen com Slack para manter sua equipe em sincronia. Essa integração permite que você receba notificações de novas conversas e as responda diretamente na interface do Slack."
     webhooks:
       name: "Webhooks"
-      description: "Eventos webhook fornecem atualizações sobre atividades em tempo real na sua conta Chatwoot. Você pode se inscrever em seus eventos preferidos, e o ChatsappAI enviará as chamadas HTTP com as atualizações."
+      description: "Eventos webhook fornecem atualizações sobre atividades em tempo real na sua conta Laburen. Você pode se inscrever em seus eventos preferidos, e o Laburen enviará as chamadas HTTP com as atualizações."
     dialogflow:
       name: "Fluxo de diálogo"
       description: "Construa chatbots com o Dialogflow e integre-os facilmente na sua caixa de entrada. Esses bots podem lidar com as consultas iniciais antes de transferi-las para um agente de atendimento ao cliente."

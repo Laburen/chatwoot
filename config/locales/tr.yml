@@ -66,6 +66,7 @@ tr:
       number_of_records: Limit aşıldı. Bir kullanıcının bir hesap için izin verilen özel filtre sayısı 50'dir.
       invalid_attribute: Invalid attribute key - [%{key}]. The key should be one of [%{allowed_keys}] or a custom attribute defined in the account.
       invalid_operator: Invalid operator. The allowed operators for %{attribute_name} are [%{allowed_keys}].
+      invalid_query_operator: Query operator must be either "AND" or "OR".
       invalid_value: Invalid value. The values provided for %{attribute_name} are invalid
   reports:
     period: Raporlama aralığı %{since}'dan %{until}'a
@@ -98,7 +99,7 @@ tr:
     conversation_traffic_csv:
       timezone: Zaman dilimi
     sla_csv:
-      conversation_id: Sohbet ID
+      conversation_id: Sohbet Kodu
       sla_policy_breached: SLA Policy
       assignee: Assignee
       team: Ekip
@@ -193,14 +194,14 @@ tr:
       description: "Dashboard Apps allow you to create and embed applications that display user information, orders, or payment history, providing more context to your customer support agents."
     dyte:
       name: "Dyte"
-      description: "Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from Chatwoot."
+      description: "Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from Laburen."
       meeting_name: "%{agent_name} bir toplantı başlattı"
     slack:
       name: "Slack"
-      description: "Integrate ChatsappAI with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
+      description: "Integrate Laburen with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
     webhooks:
       name: "Webhooks"
-      description: "Webhook events provide real-time updates about activities in your ChatsappAI account. You can subscribe to your preferred events, and ChatsappAI will send you HTTP callbacks with the updates."
+      description: "Webhook events provide real-time updates about activities in your Laburen account. You can subscribe to your preferred events, and Laburen will send you HTTP callbacks with the updates."
     dialogflow:
       name: "Dialogflow botu"
       description: "Build chatbots with Dialogflow and easily integrate them into your inbox. These bots can handle initial queries before transferring them to a customer service agent."

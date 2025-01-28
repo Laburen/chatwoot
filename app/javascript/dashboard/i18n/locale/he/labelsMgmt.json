@@ -10,11 +10,11 @@
       "404": "אין תוויות זמינות בחשבון זה.",
       "TITLE": "נהל תוויות",
       "DESC": "תוויות מאפשרות לך לקבץ את השיחות יחד.",
-      "TABLE_HEADER": [
-        "שם",
-        "תיאור",
-        "צֶבַע"
-      ]
+      "TABLE_HEADER": {
+        "NAME": "שם",
+        "DESCRIPTION": "תיאור",
+        "COLOR": "צֶבַע"
+      }
     },
     "FORM": {
       "NAME": {
@@ -46,7 +46,7 @@
         "DESELECT": "Deselect label",
         "DISMISS": "Dismiss suggestion"
       },
-      "POWERED_BY": "ChatsappAI AI",
+      "POWERED_BY": "Laburen AI",
       "DISMISS": "סגור",
       "ADD_SELECTED_LABELS": "Add selected labels",
       "ADD_SELECTED_LABEL": "Add selected label",

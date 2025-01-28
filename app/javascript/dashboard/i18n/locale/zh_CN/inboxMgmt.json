@@ -8,28 +8,24 @@
     "LIST": {
       "404": "此账户没有收件箱。"
     },
-    "CREATE_FLOW": [
-      {
-        "title": "选择频道",
-        "route": "settings_inbox_new",
-        "body": "选择你想要与ChatsappAI 集成的提供商。"
+    "CREATE_FLOW": {
+      "CHANNEL": {
+        "TITLE": "选择频道",
+        "BODY": "选择你想要与Chatwoot 集成的提供商。"
       },
-      {
-        "title": "新增收件箱",
-        "route": "settings_inboxes_page_channel",
-        "body": "验证您的帐户并创建收件箱。"
+      "INBOX": {
+        "TITLE": "新增收件箱",
+        "BODY": "验证您的帐户并创建收件箱。"
       },
-      {
-        "title": "添加客服代理",
-        "route": "settings_inboxes_add_agents",
-        "body": "将客服添加到创建的收件箱。"
+      "AGENT": {
+        "TITLE": "添加客服代理",
+        "BODY": "将客服添加到创建的收件箱。"
       },
-      {
-        "title": "Voilà!",
-        "route": "settings_inbox_finish",
-        "body": "你已设定状态为离开"
+      "FINISH": {
+        "TITLE": "Voilà!",
+        "BODY": "你已设定状态为离开"
       }
-    ],
+    },
     "ADD": {
       "CHANNEL_NAME": {
         "LABEL": "收件箱名称",
@@ -343,7 +339,7 @@
       },
       "AUTH": {
         "TITLE": "选择一个通道",
-        "DESC": "ChatsappAI supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below."
+        "DESC": "Laburen supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below."
       },
       "AGENTS": {
         "TITLE": "客服代理们",
@@ -471,7 +467,7 @@
       "SETTINGS": "设置",
       "COLLABORATORS": "Collaborators",
       "CONFIGURATION": "Configuration",
-      "CAMPAIGN": "Campaigns",
+      "CAMPAIGN": "Campagnes",
       "PRE_CHAT_FORM": "Pre Chat Form",
       "BUSINESS_HOURS": "工作时间",
       "WIDGET_BUILDER": "小部件生成器",
@@ -739,7 +735,7 @@
         "USER_MESSAGE": "嗨",
         "AGENT_MESSAGE": "您好"
       },
-      "BRANDING_TEXT": "由 ChatsappAI 支持",
+      "BRANDING_TEXT": "由 Laburen 支持",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
