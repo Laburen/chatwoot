@@ -65,7 +65,7 @@ export default camelcaseKeys(
           account_id: 2,
           coordinates_lat: 37.7937545,
           coordinates_long: -122.3997472,
-          fallback_title: 'Laburen Inc',
+          fallback_title: 'Chatwoot Inc',
           extension: null,
           file_size: 287949,
           width: null,

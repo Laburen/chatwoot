@@ -7,7 +7,7 @@ export const contactData = {
     city: 'Kerala',
     country: 'India',
     description: 'Curious about the web.',
-    companyName: 'Laburen',
+    companyName: 'Chatwoot',
     countryCode: 'IN',
     socialProfiles: {
       github: 'johndoe',

@@ -60,9 +60,9 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
     },
     sender: {
       id: 1,
-      name: 'Laburen',
+      name: 'Chatwoot',
     },
-    message: 'Hi! Laburen here. Need help setting up? Let me know!',
+    message: 'Hi! Chatwoot here. Need help setting up? Let me know!',
     campaign_status: 'active',
     enabled: false,
     campaign_type: 'ongoing',
