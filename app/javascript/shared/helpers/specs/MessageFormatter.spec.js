@@ -3,13 +3,13 @@ import MessageFormatter from '../MessageFormatter';
 describe('#MessageFormatter', () => {
   describe('content with links', () => {
     it('should format correctly', () => {
-      const message = 'Laburen is an opensource tool. [Laburen](https://www.chatwoot.com)';
+      const message = 'Chatwoot is an opensource tool. [Chatwoot](https://www.chatwoot.com)';
       expect(new MessageFormatter(message).formattedMessage).toMatch(
         '<p>Laburen is an opensource tool. <a href="https://www.chatwoot.com" class="link" rel="noreferrer noopener nofollow" target="_blank">Laburen</a></p>'
       );
     });
     it('should format correctly', () => {
-      const message = 'Laburen is an opensource tool. https://www.chatwoot.com';
+      const message = 'Chatwoot is an opensource tool. https://www.chatwoot.com';
       expect(new MessageFormatter(message).formattedMessage).toMatch(
         '<p>Laburen is an opensource tool. <a href="https://www.chatwoot.com" class="link" rel="noreferrer noopener nofollow" target="_blank">https://www.chatwoot.com</a></p>'
       );
@@ -35,21 +35,21 @@ describe('#MessageFormatter', () => {
 
   describe('content with image and has "cw_image_height" query at the end of URL', () => {
     it('should set image height correctly', () => {
-      const message = 'Laburen is an opensource tool. ![](http://chatwoot.com/chatwoot.png?cw_image_height=24px)';
+      const message = 'Chatwoot is an opensource tool. ![](http://chatwoot.com/chatwoot.png?cw_image_height=24px)';
       expect(new MessageFormatter(message).formattedMessage).toMatch(
         '<p>Laburen is an opensource tool. <img src="http://chatwoot.com/chatwoot.png?cw_image_height=24px" alt="" style="height: 24px;" /></p>'
       );
     });
 
     it('should set image height correctly if its original size', () => {
-      const message = 'Laburen is an opensource tool. ![](http://chatwoot.com/chatwoot.png?cw_image_height=auto)';
+      const message = 'Chatwoot is an opensource tool. ![](http://chatwoot.com/chatwoot.png?cw_image_height=auto)';
       expect(new MessageFormatter(message).formattedMessage).toMatch(
         '<p>Laburen is an opensource tool. <img src="http://chatwoot.com/chatwoot.png?cw_image_height=auto" alt="" style="height: auto;" /></p>'
       );
     });
 
     it('should not set height', () => {
-      const message = 'Laburen is an opensource tool. ![](http://chatwoot.com/chatwoot.png)';
+      const message = 'Chatwoot is an opensource tool. ![](http://chatwoot.com/chatwoot.png)';
       expect(new MessageFormatter(message).formattedMessage).toMatch(
         '<p>Laburen is an opensource tool. <img src="http://chatwoot.com/chatwoot.png" alt="" /></p>'
       );
@@ -58,7 +58,7 @@ describe('#MessageFormatter', () => {
 
   describe('tweets', () => {
     it('should return the same string if not tags or @mentions', () => {
-      const message = 'Laburen is an opensource tool';
+      const message = 'Chatwoot is an opensource tool';
       expect(new MessageFormatter(message).formattedMessage).toMatch(message);
     });
 
@@ -83,7 +83,7 @@ describe('#MessageFormatter', () => {
 
   describe('private notes', () => {
     it('should return the same string if not tags or @mentions', () => {
-      const message = 'Laburen is an opensource tool';
+      const message = 'Chatwoot is an opensource tool';
       expect(new MessageFormatter(message).formattedMessage).toMatch(message);
     });
 
@@ -106,7 +106,7 @@ describe('#MessageFormatter', () => {
     it('returns the plain text without HTML', () => {
       const message = '<b>Laburen is an opensource tool. https://www.chatwoot.com</b>';
       expect(new MessageFormatter(message).plainText).toMatch(
-        'Laburen is an opensource tool. https://www.chatwoot.com'
+        'Chatwoot is an opensource tool. https://www.chatwoot.com'
       );
     });
   });
