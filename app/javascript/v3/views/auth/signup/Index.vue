@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full dark:bg-slate-900">
+  <div class="w-full h-full bg-n-background">
     <div v-show="!isLoading" class="flex h-full min-h-screen items-center">
       <div
         class="flex-1 min-h-[640px] inline-flex items-center h-full justify-center overflow-auto py-6"
@@ -52,16 +52,16 @@ export default {
               class="hidden w-auto h-8 dark:block"
             />
             <h2
-              class="mt-6 text-3xl font-medium text-left mb-7 text-slate-900 dark:text-woot-50"
+              class="mt-6 text-3xl font-medium text-left mb-7 text-n-slate-12"
             >
               {{ $t('REGISTER.TRY_WOOT') }}
             </h2>
           </div>
           <SignupForm />
-          <div class="px-1 text-sm text-slate-800 dark:text-woot-50">
+          <div class="px-1 text-sm text-n-slate-12">
             <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
             <router-link class="text-link" to="/app/login">
-              Login to Laburen
+              Login to Laburen.com
             </router-link>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default {
     </div>
     <div
       v-show="isLoading"
-      class="flex items-center justify-center w-full h-full"
+      class="flex items-center min-h-screen justify-center w-full h-full"
     >
       <Spinner color-scheme="primary" size="" />
     </div>

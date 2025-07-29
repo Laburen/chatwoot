@@ -6,12 +6,14 @@ import ImapSettings from '../ImapSettings.vue';
 import SmtpSettings from '../SmtpSettings.vue';
 import { useVuelidate } from '@vuelidate/core';
 import { required } from '@vuelidate/validators';
+import NextButton from 'dashboard/components-next/button/Button.vue';
 
 export default {
   components: {
     SettingsSection,
     ImapSettings,
     SmtpSettings,
+    NextButton,
   },
   mixins: [inboxMixin],
   props: {
@@ -27,6 +29,7 @@ export default {
     return {
       hmacMandatory: false,
       whatsAppInboxAPIKey: '',
+      isSyncingTemplates: false,
     };
   },
   validations: {
@@ -79,6 +82,19 @@ export default {
         useAlert(this.$t('INBOX_MGMT.EDIT.API.SUCCESS_MESSAGE'));
       } catch (error) {
         useAlert(this.$t('INBOX_MGMT.EDIT.API.ERROR_MESSAGE'));
+      }
+    },
+    async syncTemplates() {
+      this.isSyncingTemplates = true;
+      try {
+        await this.$store.dispatch('inboxes/syncTemplates', this.inbox.id);
+        useAlert(
+          this.$t('INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_TEMPLATES_SYNC_SUCCESS')
+        );
+      } catch (error) {
+        useAlert(this.$t('INBOX_MGMT.EDIT.API.ERROR_MESSAGE'));
+      } finally {
+        this.isSyncingTemplates = false;
       }
     },
   },
@@ -135,7 +151,7 @@ export default {
         :title="$t('INBOX_MGMT.SETTINGS_POPUP.HMAC_MANDATORY_VERIFICATION')"
         :sub-title="$t('INBOX_MGMT.SETTINGS_POPUP.HMAC_MANDATORY_DESCRIPTION')"
       >
-        <div class="flex items-center gap-2">
+        <div class="flex gap-2 items-center">
           <input
             id="hmacMandatory"
             v-model="hmacMandatory"
@@ -167,7 +183,7 @@ export default {
       :title="$t('INBOX_MGMT.SETTINGS_POPUP.HMAC_MANDATORY_VERIFICATION')"
       :sub-title="$t('INBOX_MGMT.SETTINGS_POPUP.HMAC_MANDATORY_DESCRIPTION')"
     >
-      <div class="flex items-center gap-2">
+      <div class="flex gap-2 items-center">
         <input
           id="hmacMandatory"
           v-model="hmacMandatory"
@@ -213,24 +229,36 @@ export default {
         "
       >
         <div
-          class="flex items-center justify-between flex-1 mt-2 whatsapp-settings--content"
+          class="flex flex-1 justify-between items-center mt-2 whatsapp-settings--content"
         >
           <woot-input
             v-model="whatsAppInboxAPIKey"
             type="text"
-            class="flex-1 mr-2"
+            class="flex-1 mr-2 [&>input]:!mb-0"
             :placeholder="
               $t(
                 'INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_SECTION_UPDATE_PLACEHOLDER'
               )
             "
           />
-          <woot-button
+          <NextButton
             :disabled="v$.whatsAppInboxAPIKey.$invalid"
             @click="updateWhatsAppInboxAPIKey"
           >
             {{ $t('INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_SECTION_UPDATE_BUTTON') }}
-          </woot-button>
+          </NextButton>
+        </div>
+      </SettingsSection>
+      <SettingsSection
+        :title="$t('INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_TEMPLATES_SYNC_TITLE')"
+        :sub-title="
+          $t('INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_TEMPLATES_SYNC_SUBHEADER')
+        "
+      >
+        <div class="flex justify-start items-center mt-2">
+          <NextButton :disabled="isSyncingTemplates" @click="syncTemplates">
+            {{ $t('INBOX_MGMT.SETTINGS_POPUP.WHATSAPP_TEMPLATES_SYNC_BUTTON') }}
+          </NextButton>
         </div>
       </SettingsSection>
     </div>

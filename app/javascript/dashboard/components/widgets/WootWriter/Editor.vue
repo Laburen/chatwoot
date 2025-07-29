@@ -220,6 +220,7 @@ const plugins = computed(() => {
       trigger: '@',
       showMenu: showUserMentions,
       searchTerm: mentionSearchKey,
+      isAllowed: () => props.isPrivate,
     }),
     createSuggestionPlugin({
       trigger: '/',
@@ -708,7 +709,7 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
     <div ref="editor" />
     <div
       v-show="isImageNodeSelected && showImageResizeToolbar"
-      class="absolute shadow-md rounded-[4px] flex gap-1 py-1 px-1 bg-slate-50 dark:bg-slate-700 text-slate-800 dark:text-slate-50"
+      class="absolute shadow-md rounded-[6px] flex gap-1 py-1 px-1 bg-n-solid-3 outline outline-1 outline-n-weak text-n-slate-12"
       :style="{
         top: toolbarPosition.top,
         left: toolbarPosition.left,
@@ -717,7 +718,7 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
       <button
         v-for="size in sizes"
         :key="size.name"
-        class="text-xs font-medium rounded-[4px] border border-solid border-slate-200 dark:border-slate-600 px-1.5 py-0.5 hover:bg-slate-100 dark:hover:bg-slate-800"
+        class="text-xs font-medium rounded-[4px] outline outline-1 outline-n-strong px-1.5 py-0.5 hover:bg-n-slate-5"
         @click="setURLWithQueryAndImageSize(size)"
       >
         {{ size.name }}
@@ -734,16 +735,16 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
   @apply flex flex-col;
 
   .ProseMirror-menubar {
-    min-height: var(--space-two) !important;
+    min-height: 1.25rem !important;
     @apply -ml-2.5 pb-0 bg-transparent text-n-slate-11;
 
     .ProseMirror-menu-active {
-      @apply bg-slate-75 dark:bg-slate-800;
+      @apply bg-n-slate-5 dark:bg-n-solid-3;
     }
   }
 
   > .ProseMirror {
-    @apply p-0 break-words text-slate-800 dark:text-slate-100;
+    @apply p-0 break-words text-n-slate-12;
 
     h1,
     h2,
@@ -752,14 +753,14 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
     h5,
     h6,
     p {
-      @apply text-slate-800 dark:text-slate-100;
+      @apply text-n-slate-12;
     }
 
     blockquote {
-      @apply border-slate-400 dark:border-slate-500;
+      @apply border-n-slate-7;
 
       p {
-        @apply text-slate-600 dark:text-slate-400;
+        @apply text-n-slate-11;
       }
     }
 
@@ -774,24 +775,38 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
 }
 
 .ProseMirror-prompt {
-  @apply z-[9999] bg-slate-25 dark:bg-slate-700 rounded-md border border-solid border-slate-75 dark:border-slate-800 shadow-lg;
+  @apply z-[9999] bg-n-alpha-3 backdrop-blur-[100px] border border-n-strong p-6 shadow-xl rounded-xl;
 
   h5 {
-    @apply dark:text-slate-25 text-slate-800;
+    @apply text-n-slate-12 mb-1.5;
+  }
+
+  .ProseMirror-prompt-buttons {
+    button {
+      @apply h-8 px-3;
+
+      &[type='submit'] {
+        @apply bg-n-brand text-white hover:bg-n-brand/90;
+      }
+
+      &[type='button'] {
+        @apply bg-n-slate-9/10 text-n-slate-12 hover:bg-n-slate-9/20;
+      }
+    }
   }
 }
 
 .is-private {
   .prosemirror-mention-node {
-    @apply font-medium bg-n-amber-2/80 dark:bg-n-amber-2/80 text-slate-900 dark:text-slate-25 py-0 px-1;
+    @apply font-medium bg-n-amber-2/80 dark:bg-n-amber-2/80 text-n-slate-12 py-0 px-1;
   }
 
   .ProseMirror-menubar-wrapper {
     > .ProseMirror {
-      @apply text-slate-800 dark:text-slate-25;
+      @apply text-n-slate-12;
 
       p {
-        @apply text-slate-800 dark:text-slate-25;
+        @apply text-n-slate-12;
       }
     }
   }
@@ -802,14 +817,14 @@ useEmitter(BUS_EVENTS.INSERT_INTO_RICH_EDITOR, insertContentIntoEditor);
 }
 
 .message-editor {
-  @apply border border-solid border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 rounded-md py-0 px-1 mb-0;
+  @apply rounded-lg outline outline-1 outline-n-weak hover:outline-n-slate-6 dark:hover:outline-n-slate-6 bg-n-alpha-black2 py-0 px-1 mb-0;
 }
 
 .editor_warning {
-  @apply border border-solid border-red-400 dark:border-red-400;
+  @apply outline outline-1 outline-n-ruby-8 dark:outline-n-ruby-8 hover:outline-n-ruby-9 dark:hover:outline-n-ruby-9;
 }
 
 .editor-warning__message {
-  @apply text-red-400 dark:text-red-400 font-normal text-sm pt-1 pb-0 px-0;
+  @apply text-n-ruby-9 dark:text-n-ruby-9 font-normal text-sm pt-1 pb-0 px-0;
 }
 </style>

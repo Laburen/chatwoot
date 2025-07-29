@@ -8,8 +8,6 @@ import {
   DEFAULT_CONVERSATION_OPENED_CONDITION,
   DEFAULT_OTHER_CONDITION,
   DEFAULT_ACTIONS,
-  MESSAGE_CONDITION_VALUES,
-  PRIORITY_CONDITION_VALUES,
 } from 'dashboard/constants/automation';
 import filterQueryGenerator from './filterQueryGenerator';
 import actionQueryGenerator from './actionQueryGenerator';
@@ -87,6 +85,7 @@ export const generateCustomAttributeTypes = (customAttributes, type) => {
 };
 
 export const generateConditionOptions = (options, key = 'id') => {
+  if (!options || !Array.isArray(options)) return [];
   return options.map(i => {
     return {
       id: i[key],
@@ -95,29 +94,22 @@ export const generateConditionOptions = (options, key = 'id') => {
   });
 };
 
-// Add the "None" option to the agent list
-export const addNoneToList = agents => [
-  {
-    id: 'nil',
-    name: 'None',
-  },
-  ...(agents || []),
-];
-
 export const getActionOptions = ({
   agents,
   teams,
   labels,
   slaPolicies,
   type,
+  addNoneToListFn,
+  priorityOptions,
 }) => {
   const actionsMap = {
-    assign_agent: addNoneToList(agents),
-    assign_team: addNoneToList(teams),
+    assign_agent: addNoneToListFn ? addNoneToListFn(agents) : agents,
+    assign_team: addNoneToListFn ? addNoneToListFn(teams) : teams,
     send_email_to_team: teams,
     add_label: generateConditionOptions(labels, 'title'),
     remove_label: generateConditionOptions(labels, 'title'),
-    change_priority: PRIORITY_CONDITION_VALUES,
+    change_priority: priorityOptions,
     add_sla: slaPolicies,
   };
   return actionsMap[type];
@@ -136,6 +128,8 @@ export const getConditionOptions = ({
   statusFilterOptions,
   teams,
   type,
+  priorityOptions,
+  messageTypeOptions,
 }) => {
   // console.log(label)
   if (isCustomAttributeCheckbox(customAttributes, type)) {
@@ -156,8 +150,8 @@ export const getConditionOptions = ({
     conversation_language: languages,
     // label: label,
     country_code: countries,
-    message_type: MESSAGE_CONDITION_VALUES,
-    priority: PRIORITY_CONDITION_VALUES,
+    message_type: messageTypeOptions,
+    priority: priorityOptions,
   };
 
   return conditionFilterMaps[type];

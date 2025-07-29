@@ -1,5 +1,10 @@
 <script>
+import NextButton from 'dashboard/components-next/button/Button.vue';
+
 export default {
+  components: {
+    NextButton,
+  },
   props: {
     label: {
       type: String,
@@ -48,16 +53,14 @@ export default {
       :src="src"
       :username="usernameAvatar"
     />
-    <div v-if="src && deleteAvatar" class="avatar-delete-btn">
-      <woot-button
-        color-scheme="alert"
-        variant="hollow"
-        size="tiny"
-        type="button"
+    <div v-if="src && deleteAvatar" class="my-1">
+      <NextButton
+        outline
+        xs
+        ruby
+        :label="$t('INBOX_MGMT.DELETE.AVATAR_DELETE_BUTTON_TEXT')"
         @click="onAvatarDelete"
-      >
-        {{ $t('INBOX_MGMT.DELETE.AVATAR_DELETE_BUTTON_TEXT') }}
-      </woot-button>
+      />
     </div>
     <label>
       <input
@@ -71,10 +74,3 @@ export default {
     </label>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.avatar-delete-btn {
-  margin-top: var(--space-smaller);
-  margin-bottom: var(--space-smaller);
-}
-</style>

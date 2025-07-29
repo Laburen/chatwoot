@@ -69,11 +69,11 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-row items-center gap-4">
+  <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4">
     <button
       v-for="keyOption in senderNameKeyOptions"
       :key="keyOption.key"
-      class="text-slate-800 dark:text-slate-100 cursor-pointer p-0"
+      class="text-n-slate-12 cursor-pointer p-0"
       @click="toggleSenderNameType(keyOption.key)"
     >
       <PreviewCard

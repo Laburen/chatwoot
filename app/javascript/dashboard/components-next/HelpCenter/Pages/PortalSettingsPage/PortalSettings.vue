@@ -74,20 +74,20 @@ const handleDeletePortal = () => {
       </div>
       <div
         v-else-if="activePortal"
-        class="flex flex-col w-full gap-4 max-w-[640px] pb-8"
+        class="flex flex-col w-full gap-4 max-w-[40rem] pb-8"
       >
         <PortalBaseSettings
           :active-portal="activePortal"
           :is-fetching="isFetching"
           @update-portal="handleUpdatePortal"
         />
-        <div class="w-full h-px bg-slate-50 dark:bg-slate-800/50" />
+        <div class="w-full h-px bg-n-weak" />
         <PortalConfigurationSettings
           :active-portal="activePortal"
           :is-fetching="isFetching"
           @update-portal-configuration="handleUpdatePortalConfiguration"
         />
-        <div class="w-full h-px bg-slate-50 dark:bg-slate-800/50" />
+        <div class="w-full h-px bg-n-weak" />
         <div class="flex items-end justify-between w-full gap-4">
           <div class="flex flex-col gap-2">
             <h6 class="text-base font-medium text-n-slate-12">

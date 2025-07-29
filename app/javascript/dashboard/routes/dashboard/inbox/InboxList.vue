@@ -9,6 +9,7 @@ import InboxListHeader from './components/InboxListHeader.vue';
 import { INBOX_EVENTS } from 'dashboard/helper/AnalyticsHelper/events';
 import IntersectionObserver from 'dashboard/components/IntersectionObserver.vue';
 import CmdBarConversationSnooze from 'dashboard/routes/dashboard/commands/CmdBarConversationSnooze.vue';
+import Spinner from 'dashboard/components-next/spinner/Spinner.vue';
 
 export default {
   components: {
@@ -16,6 +17,7 @@ export default {
     InboxListHeader,
     IntersectionObserver,
     CmdBarConversationSnooze,
+    Spinner,
   },
   setup() {
     const { uiSettings } = useUISettings();
@@ -121,6 +123,7 @@ export default {
         })
         .then(() => {
           useAlert(this.$t('INBOX.ALERTS.MARK_AS_READ'));
+          this.$store.dispatch('notifications/unReadCount'); // to update the unread count in the store real time
         });
     },
     markNotificationAsUnRead(notification) {
@@ -133,6 +136,7 @@ export default {
         })
         .then(() => {
           useAlert(this.$t('INBOX.ALERTS.MARK_AS_UNREAD'));
+          this.$store.dispatch('notifications/unReadCount'); // to update the unread count in the store real time
         });
     },
     deleteNotification(notification) {
@@ -186,12 +190,16 @@ export default {
           notificationType,
         });
 
-        this.$store.dispatch('notifications/read', {
-          id,
-          primaryActorId,
-          primaryActorType,
-          unreadCount: this.meta.unreadCount,
-        });
+        this.$store
+          .dispatch('notifications/read', {
+            id,
+            primaryActorId,
+            primaryActorType,
+            unreadCount: this.meta.unreadCount,
+          })
+          .then(() => {
+            this.$store.dispatch('notifications/unReadCount'); // to update the unread count in the store real time
+          });
 
         this.$router.push({
           name: 'inbox_view_conversation',
@@ -236,12 +244,12 @@ export default {
           @context-menu-close="isInboxContextMenuOpen = false"
           @click="openConversation(notificationItem)"
         />
-        <div v-if="uiFlags.isFetching" class="text-center">
-          <span class="mt-4 mb-4 spinner" />
+        <div v-if="uiFlags.isFetching" class="flex justify-center my-4">
+          <Spinner class="text-n-brand" />
         </div>
         <p
           v-if="showEmptyState"
-          class="p-4 text-sm font-medium text-center text-slate-400 dark:text-slate-400"
+          class="p-4 text-sm font-medium text-center text-n-slate-10"
         >
           {{ $t('INBOX.LIST.NO_NOTIFICATIONS') }}
         </p>

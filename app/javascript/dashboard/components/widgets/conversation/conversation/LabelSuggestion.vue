@@ -1,6 +1,6 @@
 <script>
 // components
-import WootButton from '../../../ui/WootButton.vue';
+import NextButton from 'dashboard/components-next/button/Button.vue';
 import Avatar from '../../Avatar.vue';
 
 // composables
@@ -19,7 +19,7 @@ export default {
   name: 'LabelSuggestion',
   components: {
     Avatar,
-    WootButton,
+    NextButton,
   },
   props: {
     suggestedLabels: {
@@ -154,7 +154,7 @@ export default {
 <template>
   <li
     v-if="shouldShowSuggestions"
-    class="label-suggestion right"
+    class="label-suggestion right list-none"
     @mouseover="isHovered = true"
     @mouseleave="isHovered = false"
   >
@@ -180,47 +180,47 @@ export default {
             <woot-label
               variant="dashed"
               v-bind="label"
-              :bg-color="
-                selectedLabels.includes(label.title) ? 'var(--w-100)' : ''
-              "
+              :bg-color="selectedLabels.includes(label.title) ? '#2781F6' : ''"
             />
           </button>
-          <WootButton
+          <NextButton
             v-if="preparedLabels.length === 1"
             v-tooltip.top="{
               content: $t('LABEL_MGMT.SUGGESTIONS.TOOLTIP.DISMISS'),
               delay: { show: 600, hide: 0 },
               hideOnClick: true,
             }"
-            variant="smooth"
-            :color-scheme="isHovered ? 'alert' : 'primary'"
-            class="label--add"
-            icon="dismiss"
-            size="tiny"
+            faded
+            xs
+            icon="i-lucide-x"
+            class="flex-shrink-0"
+            :color="isHovered ? 'ruby' : 'blue'"
             @click="dismissSuggestions"
           />
         </div>
-        <div v-if="preparedLabels.length > 1">
-          <WootButton
-            :variant="selectedLabels.length === 0 ? 'smooth' : ''"
-            class="label--add"
-            icon="add"
-            size="tiny"
+        <div
+          v-if="preparedLabels.length > 1"
+          class="inline-flex items-center gap-1"
+        >
+          <NextButton
+            xs
+            icon="i-lucide-plus"
+            class="flex-shrink-0"
+            :variant="selectedLabels.length === 0 ? 'faded' : 'solid'"
+            :label="addButtonText"
             @click="addAllLabels"
-          >
-            {{ addButtonText }}
-          </WootButton>
-          <WootButton
+          />
+          <NextButton
             v-tooltip.top="{
               content: $t('LABEL_MGMT.SUGGESTIONS.TOOLTIP.DISMISS'),
               delay: { show: 600, hide: 0 },
               hideOnClick: true,
             }"
-            :color-scheme="isHovered ? 'alert' : 'primary'"
-            variant="smooth"
-            class="label--add"
-            icon="dismiss"
-            size="tiny"
+            faded
+            xs
+            icon="i-lucide-x"
+            class="flex-shrink-0"
+            :color="isHovered ? 'ruby' : 'blue'"
             @click="dismissSuggestions"
           />
         </div>
@@ -251,17 +251,14 @@ export default {
 .label-suggestion {
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: var(--space-normal);
+  margin-top: 1rem;
 
   .label-suggestion--container {
     max-width: 300px;
   }
 
   .label-suggestion--options {
-    text-align: right;
-    display: flex;
-    align-items: center;
-    gap: var(--space-micro);
+    @apply gap-0.5 text-end flex items-center;
 
     button.label-suggestion--option {
       .label {
@@ -272,14 +269,12 @@ export default {
   }
 
   .chatwoot-ai-icon {
-    height: var(--font-size-mini);
-    width: var(--font-size-mini);
+    height: 0.75rem;
+    width: 0.75rem;
   }
 
   .label-suggestion--title {
-    color: var(--b-600);
-    margin-top: var(--space-micro);
-    font-size: var(--font-size-micro);
+    @apply text-n-slate-11 mt-0.5 text-xxs;
   }
 }
 </style>
