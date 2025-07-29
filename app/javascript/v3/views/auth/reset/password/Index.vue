@@ -82,12 +82,7 @@ export default {
       <p
         class="mb-4 text-sm font-normal leading-6 tracking-normal text-n-slate-11"
       >
-        {{
-          useInstallationName(
-            $t('RESET_PASSWORD.DESCRIPTION'),
-            globalConfig.installationName
-          )
-        }}
+        Laburen CRM
       </p>
       <div class="space-y-5">
         <FormInput

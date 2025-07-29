@@ -199,6 +199,7 @@ const tailwindConfig = {
       current: 'currentColor',
       ...colors,
       body: slateDark.slate7,
+      'woot-500': '#22c55e',
     },
     keyframes: {
       ...defaultTheme.keyframes,

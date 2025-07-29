@@ -122,6 +122,7 @@ export const getConditionOptions = ({
   contacts,
   countries,
   customAttributes,
+  // label,
   inboxes,
   languages,
   statusFilterOptions,
@@ -130,6 +131,7 @@ export const getConditionOptions = ({
   priorityOptions,
   messageTypeOptions,
 }) => {
+  // console.log(label)
   if (isCustomAttributeCheckbox(customAttributes, type)) {
     return booleanFilterOptions;
   }
@@ -137,7 +139,6 @@ export const getConditionOptions = ({
   if (isCustomAttributeList(customAttributes, type)) {
     return getCustomAttributeListDropdownValues(customAttributes, type);
   }
-
   const conditionFilterMaps = {
     status: statusFilterOptions,
     assignee_id: agents,
@@ -147,6 +148,7 @@ export const getConditionOptions = ({
     campaigns: generateConditionOptions(campaigns),
     browser_language: languages,
     conversation_language: languages,
+    // label: label,
     country_code: countries,
     message_type: messageTypeOptions,
     priority: priorityOptions,

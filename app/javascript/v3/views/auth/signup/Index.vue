@@ -60,13 +60,8 @@ export default {
           <SignupForm />
           <div class="px-1 text-sm text-n-slate-12">
             <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
-            <router-link class="text-link text-n-brand" to="/app/login">
-              {{
-                useInstallationName(
-                  $t('LOGIN.TITLE'),
-                  globalConfig.installationName
-                )
-              }}
+            <router-link class="text-link" to="/app/login">
+              Login to Laburen.com
             </router-link>
           </div>
         </div>

@@ -181,10 +181,10 @@ export default {
         :alt="globalConfig.installationName"
         class="hidden w-auto h-8 mx-auto dark:block"
       />
-      <h2 class="mt-6 text-3xl font-medium text-center text-n-slate-12">
-        {{
-          useInstallationName($t('LOGIN.TITLE'), globalConfig.installationName)
-        }}
+      <h2
+        class="mt-6 text-3xl font-medium text-center text-slate-900 dark:text-woot-50"
+      >
+        Login to Laburen.com
       </h2>
       <p v-if="showSignupLink" class="mt-3 text-sm text-center text-n-slate-11">
         {{ $t('COMMON.OR') }}
