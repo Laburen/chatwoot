@@ -758,7 +758,7 @@
         "TITLE": "Are you sure to disconnect the inbox?",
         "DESCRIPTION": "",
         "CONFIRM": "Так, видалити",
-        "SUCCESS_MESSAGE": "The inbox was successfully disconnected.",https://github.com/Laburen/chatwoot/pull/8/conflict?name=app%252Fjavascript%252Fdashboard%252Fi18n%252Flocale%252Fuk%252Fintegrations.json&ancestor_oid=2fe620f0ccf3438d9b8b70173eda19f484e9b891&base_oid=8f9016a66b3092fe7b6592d7e2279ff3ad246d70&head_oid=b2ef2ce64afa7e4ec4c5a714a908c92c00630845
+        "SUCCESS_MESSAGE": "The inbox was successfully disconnected.",
         "ERROR_MESSAGE": "There was an error disconnecting the inbox, please try again."
       },
       "FORM_DESCRIPTION": "Choose an inbox to connect with the assistant.",
