@@ -97,8 +97,8 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
   end
 
   # TODO: See if we can unify the API versions and for both paths and make it consistent with out facebook app API versions
-  def phone_id_path
-    "#{api_base_path}/v13.0/#{whatsapp_channel.provider_config['phone_number_id']}"
+  def phone_id_path(version = 'v13.0')
+    "#{api_base_path}/#{version}/#{whatsapp_channel.provider_config['phone_number_id']}"
   end
 
   def business_account_path
